@@ -36,8 +36,9 @@
             alert("must not be null!");
             return;
         } else {
-            fetch("#", {
+            fetch("https://hackathon.w2fzu.com/sign_up", {
                 method: 'POST',
+                mode:'no-cors',
                 body: JSON.stringify({
                     num: num,
                     name: name,
