@@ -1,1 +1,1 @@
-# marathon_sign_up
+# a simple page for the registration of hackmarathon
