@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link>
+    <title>vote</title>
+</head>
+
+<body>
+    <div id="confirm">
+        <p>WELCOME!</p>
+        <input type="text" placeholder="Student Number">
+        <input type="text" placeholder="Name">
+        <input type="text" placeholder="QQ">
+        <input type="text" placeholder="Phone">
+        <button id="post_data">Sign Up</button>
+    </div>
+</body>
+
+</html>
+<script>
+    document.getElementById("post_data").addEventListener("click", function () {
+        let num = document.getElementsByTagName("input")[0].value;
+        let name = document.getElementsByTagName("input")[1].value;
+        let qq = document.getElementsByTagName("input")[2].value;
+        let phone = document.getElementsByTagName("input")[3].value;
+        let data = JSON.stringify({
+            num: num,
+            name: name,
+            qq: qq,
+            phone: phone
+        });
+        if (validata(num, name, qq, phone) == 0) {
+            alert("must not be null!");
+            return;
+        } else {
+            fetch("#", {
+                method: 'POST',
+                body: JSON.stringify({
+                    num: num,
+                    name: name,
+                    qq: qq,
+                    phone: phone
+                }),
+                headers: new Headers({
+                    'Content-Type': 'application/json'
+                })
+            })
+            alert("success!");
+        }
+    });
+
+    function validata(num, name, qq, phone) {
+        if (num == "" || name == "" || qq == "" || phone == "") {
+            return 0;
+        } else {
+            return 1;
+        }
+    }
+</script>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        box-sizing: border-box;
+        outline: none;
+    }
+
+    html {
+        width: 100%;
+        height: 100%;
+        background: url("./static/background.jpg");
+        background-size: 100%;
+    }
+
+    #confirm {
+        width: 33.3vw;
+        height: 30vw;
+        border-radius: 8px;
+        margin-left: 33.3vw;
+        margin-top: 15vh;
+        background-color: #232323;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #confirm p {
+        font-size: 5vh;
+        color: #a7a7a7;
+    }
+
+    input,
+    button {
+        display: inline-block;
+        height: 10%;
+        width: 80%;
+        border-radius: 5px;
+        padding-left: 3%;
+        font-size: 120%;
+        margin-top: 3%;
+        background-color: black;
+        color: #a7a7a7;
+    }
+
+    button {
+        background-color: #035e03;
+        color: white;
+        font-size: 150%;
+        cursor: pointer;
+        transition: all .5s;
+    }
+
+    button:hover {
+        background-color: rgb(4, 119, 71);
+    }
+
+    button:active {
+        outline: 1px rgb(23, 216, 250) solid;
+    }
+
+    @media screen and (max-width:600px) {
+        #confirm {
+            width: 100%;
+            height: 60vh;
+            margin-left: 0;
+            background: none;
+        }
+    }
+</style>
