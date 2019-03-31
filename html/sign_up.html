@@ -1,267 +1,282 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link>
-    <title>vote</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
 
 <body>
-    <div id="introduce">
-        <p id="introduce_title">
-            Hackathon sign up form
-        </p>
+    <div id="headbar">
+        <img src="../static/background.jpg">
+        <div id="headfont">
+            <p>welcom to</p>
+            <p style="font-size: 40px">3rd Hackthon</p>
+            <p>in fuzhou University</p>
+        </div>
     </div>
 
-    <div id="confirm">
-        <div id="confirm_title">
-            <div id="confirm_left">
-                <p>Sign up right now!</p>
-                <p id="little_word">Input your message</p>
-            </div>
-            <div id="confirm_right">
-                <img src="../static/key.png">
-            </div>
+    <div id="main">
+        <div id="mainhead">
+            <p style="font-size: 22px;font-weight: bolder;">Entry Form</p>
+            <p style="font-size: 12px;">请保证你的信息正确以确保顺利参赛</p>
         </div>
-        <div id="confirm_input">
-            <input type="text" class="myinput" placeholder="Student Number">
-            <input type="text" class="myinput" placeholder="Name">
-            <input type="text" class="myinput" placeholder="QQ">
-            <input type="text" class="myinput" placeholder="Phone">
+        <div id="form">
+            <div id="halfform">
+                <div class="userinput">
+                    <label>队伍名称</label><input type="text">
+                </div>
+                <div class="userinput">
+                    <label>队伍类别</label>
+                    <select name="cars">
+                        <option value="Unity">Unity</option>
+                        <option value="Nomal">普通</option>
+                        <option value="Pm">PM</option>
+                    </select>
+                </div>
+                <div class="userinput">
+                    <p>队长:</p>
+                </div>
+                <div class="userinput">
+                    <label>姓名</label><input type="text">
+                </div>
+                <div class="userinput">
+                    <label>学号</label><input type="text">
+                </div>
+                <div class="userinput">
+                    <label>联系电话</label><input type="text">
+                </div>
+                <div class="userinput">
+                    <p>队员一:</p>
+                </div>
+                <div class="userinput">
+                    <label>姓名</label><input type="text">
+                </div>
+                <div class="userinput">
+                    <label>学号</label><input type="text">
+                </div>
+                <div class="userinput">
+                    <label>联系电话</label><input type="text">
+                </div>
+            </div>
+
+            <div id="halfform">
+                <div class="userinput">
+                    <p>队员二:</p>
+                </div>
+                <div class="userinput">
+                    <label>姓名</label><input type="text">
+                </div>
+                <div class="userinput">
+                    <label>学号</label><input type="text">
+                </div>
+                <div class="userinput">
+                    <label>联系电话</label><input type="text">
+                </div>
+
+                <div class="userinput">
+                    <p>队员三:</p>
+                </div>
+                <div class="userinput">
+                    <label>姓名</label><input type="text">
+                </div>
+                <div class="userinput">
+                    <label>学号</label><input type="text">
+                </div>
+                <div class="userinput">
+                    <label>联系电话</label><input type="text">
+                </div>
+                <div class="userinput">
+                    <p>注:产品参赛人数只可一人，其他类别人数4人以内，队员资料选填，例：若3人队伍，则填写队长加上队员1，队员2资料即可</p>
+                </div>
+            </div>
             <div id="verify">
-                <input type="text" class="myinput" placeholder="enter the verification" id="verifyinput">
-                <img src="#" id="verifyimg">
+                <img id="verifyimg" src="#">
+                <input type="text">
             </div>
-            <button class="myinput" id="post_data">Sign Up</button>
         </div>
     </div>
-
-    <div id="tail">
-        <p>
-            or connect with us by west2gold@gmail.com
-        </p>
-        <img src="../static/logo.png">
+    <div id="bottom">
+        <button id="submit">提交</button>
     </div>
 </body>
 
 </html>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #headbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #headbar img {
+        width: 100%;
+        float: left;
+    }
+
+    #headfont {
+        z-index: 1000;
+        position: absolute;
+        text-align: center;
+        color: white;
+    }
+
+    #headfont p {
+        margin: 1vh;
+    }
+
+    #main {
+        margin-left: 10%;
+        margin-top: 50px;
+        width: 80%;
+        border: 1px rgb(214, 214, 214) solid;
+    }
+
+    #mainhead {
+        text-align: center;
+    }
+
+    #form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #halfform {
+        width: 40%;
+        padding: 0 5%;
+    }
+
+    .userinput {
+        margin: 35px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .userinput input,
+    select {
+        width: 60%;
+        height: 25px;
+        border-style: none;
+        border: 1px rgb(189, 189, 189) solid;
+        border-radius: 4px;
+    }
+
+    #bottom {
+        text-align: center;
+    }
+    #verify{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #verify input{
+        height: 25px;
+        border-style: none;
+        border: 1px rgb(189, 189, 189) solid;
+        border-radius: 4px;
+        font-size: 20px;
+        width: 30%;
+    }
+    #submit {
+        width: 70px;
+        height: 30px;
+        font-size: 15px;
+        background-color: rgb(94, 95, 2);
+        color: white;
+        outline: none;
+        cursor: pointer;
+        border-radius: 5px;
+        margin: 10px;
+    }
+    @media screen and (max-width:800px) {
+
+        .userinput input,
+        select {
+            width: 100%;
+        }
+
+        #halfform {
+            width: 100%;
+        }
+
+        .userinput {
+            margin: 10px;
+        }
+    }
+</style>
+
 <script src="https://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
 <script>
-    let img_id = null;
-    window.onload = function () {
-        get_idencode();
-    }
-    document.getElementById("verifyimg").addEventListener("click", function () {
-        get_idencode();
-    });
-    document.getElementById("post_data").addEventListener("click", function () {
-        let num = document.getElementsByTagName("input")[0].value;
-        let name = document.getElementsByTagName("input")[1].value;
-        let qq = document.getElementsByTagName("input")[2].value;
-        let phone = document.getElementsByTagName("input")[3].value;
-        let verify = document.getElementById("verifyinput").value;
-        let data = {
-            idenid: img_id,
-            idencode: verify,
-            num: num,
-            name: name,
-            qq: qq,
-            phone: phone
-        };
-        if (validata(num, name, qq, phone) == 0) {
-            alert("must not be null!");
+    let img_id=null;
+    get_idencode();
+    document.getElementById("submit").addEventListener("click", function () {
+        if (!notnull()) {
+            alert("队长一栏不能为空!");
             return;
-        } else {
-            $.ajax({
-                type: "POST",
-                url: "https://hackathon.w2fzu.com/sign_up",
-                data: data,
-                dataType: "json",
-                success: function (res) {
-                    if(res.status==false){
-                        alert("Verification code error!");
-                    }else{
-                        alert("success!");
-                    }
-                },
-            });
         }
-    });
-    function validata(num, name, qq, phone) {
-        if (num == "" || name == "" || qq == "" || phone == "") {
-            return 0;
+        ajax();
+    })
+    document.getElementById("verifyimg").addEventListener("click",function(){
+        get_idencode()
+    })
+    function getmes(num){
+        return document.getElementsByClassName("userinput")[num].getElementsByTagName("input")[0].value;
+    }
+    function notnull() {
+        let captain = getmes(3);
+        let captainnum = getmes(4);
+        let captainphone = getmes(5);
+        if (captain == "" || captainnum == "" || captainphone == "") {
+            return false;
         } else {
-            return 1;
+            return true;
         }
-    };
-
+    }
     function get_idencode() {
         $.post("https://hackathon.w2fzu.com/get_idencode", function (data) {
             document.getElementById("verifyimg").src = data.img_url;
             img_id = data.img_id;
         });
     };
+    function ajax() {
+        let data={
+            team_name:getmes(0),
+            team_sort:document.getElementsByClassName("userinput")[1].getElementsByTagName("select")[0].value,
+            captain_name:getmes(3),
+            captain_num:getmes(4),
+            captain_phone:getmes(5),
+            mem1_name:getmes(7),
+            mem1_num:getmes(8),
+            mem1_phone:getmes(9),
+            mem2_name:getmes(11),
+            mem2_num:getmes(12),
+            mem2_phone:getmes(13),
+            mem3_name:getmes(15),
+            mem3_num:getmes(16),
+            mem3_phone:getmes(17),
+            verify:document.getElementById("verify").getElementsByTagName("input")[0].value
+        }
+        $.ajax({
+            type: "POST",
+            url: "https://hackathon.w2fzu.com/sign_up",
+            data: data,
+            dataType: "json",
+            success: function (res) {
+                if (res.status == false) {
+                    alert("验证码错误!");
+                } else {
+                    alert("报名成功!");
+                }
+            },
+        })
+    }
 </script>
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        box-sizing: border-box;
-        outline: none;
-    }
-
-    html {
-        width: 100%;
-        height: 100%;
-        background-size: 100%;
-    }
-
-    body {
-        background: url("../static/background.jpg");
-        height: 100%;
-        top: 0;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    #introduce {
-        font-size: 2vh;
-        color: white;
-        text-align: center;
-        word-break: break-all;
-    }
-
-    #introduce_title {
-        font-size: 5vh;
-        font-weight: normal;
-        margin: 20px;
-    }
-    #confirm {
-        width: 30vw;
-        margin-left: 35vw;
-        height: 580px;
-        background-color: #dadada;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #confirm_title {
-        width: 100%;
-        font-size: 4vh;
-        color: #777777;
-        background-color: white;
-        height: 25%;
-        padding-left: 8%;
-        text-align: left;
-        display: flex;
-        align-items: center;
-    }
-    #confirm_left {
-        width: 65%;
-        display: inline-block;
-    }
-    #confirm_right{
-        width: 25%;
-    }
-    #confirm_right img{
-        width: 100%;
-    }
-    #little_word {
-        font-size: 2.5vh;
-        color: #a7a7a7;
-    }
-
-    #confirm_input {
-        height: 75%;
-        text-align: center;
-    }
-
-    .myinput {
-        display: inline-block;
-        height: 44px;
-        width: 85%;
-        border-radius: 5px;
-        padding-left: 3%;
-        font-size: 120%;
-        margin-top: 4%;
-        background-color: white;
-        color: #a7a7a7;
-    }
-
-    #post_data {
-        background-color: #09ad09;
-        color: white;
-        font-size: 150%;
-        cursor: pointer;
-        transition: all .5s;
-    }
-
-    button:hover {
-        background-color: rgb(4, 119, 71);
-    }
-
-    button:active {
-        outline: 1px rgb(23, 216, 250) solid;
-    }
-
-    #verify {
-        width: 85%;
-        height: 44px;
-        margin-top: 4%;
-        display: flex;
-        justify-content: center;
-        margin-left: 8%;
-        background-color: white;
-        border-radius: 5px;
-    }
-
-    #verifyinput {
-        width: 60%;
-        padding-left: 3%;
-        margin: 0;
-    }
-
-    #verifyimg {
-        height: 100%;
-        width: 40%;
-    }
-
-    #tail {
-        width: 100%;
-        font-size: 2vh;
-        color: white;
-        text-align: center;
-    }
-
-    #tail img {
-        height: 7vh;
-        width: 7vh;
-    }
-
-    @media screen and (max-width:600px) {
-        #confirm {
-            width: 100%;
-            bottom: 0px;
-            height: 400px;
-            margin-left: 0;
-            background: none;
-        }
-
-        #introduce_title {
-            font-size: 4vh;
-            font-weight: normal;
-            margin: 20px;
-        }
-
-        #tail {
-            display: none;
-        }
-    }
-</style>
