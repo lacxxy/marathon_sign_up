@@ -30,7 +30,7 @@
                 </div>
                 <div class="userinput">
                     <label>队伍类别</label>
-                    <select name="cars">
+                    <select id="select">
                         <option value="Unity">Unity</option>
                         <option value="Nomal">普通</option>
                         <option value="Pm">PM</option>
@@ -229,6 +229,19 @@
     document.getElementById("verifyimg").addEventListener("click",function(){
         get_idencode()
     })
+    document.getElementById("select").addEventListener("change",function(){
+        judgesort();
+    })
+    function judgesort(){
+        let sort=document.getElementsByClassName("userinput")[1].getElementsByTagName("select")[0].value;
+        if(sort=="Pm"){
+            $(".userinput").css("display","flex");
+            $(".userinput:gt(5)").css("display","none");
+            $(".userinput:last").css("display","flex");
+        }else{
+            $(".userinput").css("display","flex");
+        }
+    }
     function getmes(num){
         return document.getElementsByClassName("userinput")[num].getElementsByTagName("input")[0].value;
     }
