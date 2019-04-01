@@ -224,6 +224,7 @@
             return;
         }
         ajax();
+        get_idencode();
     })
     document.getElementById("verifyimg").addEventListener("click",function(){
         get_idencode()
@@ -263,7 +264,8 @@
             mem3_name:getmes(15),
             mem3_num:getmes(16),
             mem3_phone:getmes(17),
-            verify:document.getElementById("verify").getElementsByTagName("input")[0].value
+            idencode:document.getElementById("verify").getElementsByTagName("input")[0].value,
+            idenid:img_id,
         }
         $.ajax({
             type: "POST",
